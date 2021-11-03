@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.6</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.humbertomattos</groupId>
+	<artifactId>kafka-springboot-integration</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>kafka-springboot-integration</name>
+	<description>Spring Boot Kafka Integration</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<spring-kafka.version>2.6.0</spring-kafka.version>
+		<lombok.version>1.16.10</lombok.version>
+		<jackson.version>2.13.0</jackson.version>
+
+		<docker.spotify.plugin.version>1.4.10</docker.spotify.plugin.version>
+		<docker.repository>kafka-springboot-integration</docker.repository>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
+	</dependencies>
+
+	<modules>
+        <module>producer</module>
+		<module>consumer</module>
+    </modules>
+
+</project>
